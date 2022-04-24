@@ -1,8 +1,8 @@
-def get_hangman(x):
+def hangman_figures(x):
     """
     Function to print the hangman graphic, that progresses through
-    different graphics, as player gets guesses wrong. 
-    Code obtained from YouTube video.
+    different graphics, as player gets guesses wrong. Code obtained 
+    from YouTube video.
     """
     if x == 1:
         print("\n+====+ ")
