@@ -30,9 +30,10 @@ print("""Rules:
 -Good luck!
     """)
 
+
 def welcome_user():
     """
-    This function allows the player to input their name
+    Function to allow the player to input their name
     before the game begins. The name field only
     accepts letters.
     """
@@ -49,4 +50,63 @@ def welcome_user():
 
             break
 
+
 welcome_user()
+
+
+random_word = random.choice(words)
+print("Hint: The word has", len(random_word), "letters")
+
+for x in random_word:
+    print("_", end=" ")
+
+
+"""
+Variables for use in Hangman game
+"""
+
+letters_guessed = []
+wrong_guesses = 0
+wrong_letters_guessed = []
+failure_count = 0
+
+"""
+Main game function code
+"""
+
+
+def run_game():
+
+    global wrong_guesses
+    global failure_count
+
+    while wrong_guesses != 6:
+        print("\nLetters guessed so far: ")
+        for letter in letters_guessed:
+            print(letter, end=" ")
+        # variable for player entry
+        guess = input("\nEnter a letter: ")
+
+        if guess.isdigit():
+            print("This game only accept letters! Please try again..")
+            continue
+
+        if guess in letters_guessed:
+            print("Letter already guessed. Try a different letter.")
+            continue
+
+        if len(guess) > 1:
+            print("Please enter one letter at a time!")
+
+        if guess in random_word:
+            print(
+                f"Correct! There is one or more '{guess}' in the secret word."
+            )
+
+        else:
+            failure_count -= 1
+            wrong_guesses += 1
+            wrong_letters_guessed.append(guess)
+            print(
+                f"Wrong! {guess} is not in our secret word. {failure_count} turn(s) left."
+            )
