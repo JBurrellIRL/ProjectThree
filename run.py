@@ -19,7 +19,7 @@ print("""
       """)
 
 print(
-    "Welcome to my Hangman game! Guess letters to discover the random word\n"
+    "Welcome to my Hangman game! Guess letters to discover the random word.\n"
 )
 
 print("""Rules:
@@ -110,13 +110,11 @@ def run_game():
                 wrong_letter_count += 1
 
         if wrong_letter_count == 0:
-            print(f"""Congratulations! The secret word was
-            {random_word}.You win!!""")
+            print(f"\nCongrats! The secret word was {random_word}. You win!")
             break
 
     else:
-        print("""\nSorry, you didn't win the game this time.
-        Better luck next time!""")
+        print("""\nBad luck, you lost. Better luck next time!""")
         print(f"The correct word was {random_word}")
 
 
