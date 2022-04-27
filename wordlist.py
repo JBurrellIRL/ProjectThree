@@ -3,14 +3,14 @@ List of animal names to be imported to main run.py file
 when game is running
 """
 
-words = [ 
-  "elephant", 
-  "monkey", 
-  "alligator", 
-  "orangutan", 
+words = [
+  "elephant",
+  "monkey",
+  "alligator",
+  "orangutan",
   "leopard",
-  "tapir", 
-  "tiger", 
+  "tapir",
+  "tiger",
   "hippopotamus",
   "rhinoceros",
   "giraffe",

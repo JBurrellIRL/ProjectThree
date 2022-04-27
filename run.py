@@ -51,26 +51,6 @@ def welcome_user():
             break
 
 
-# welcome_user()
-
-
-# random_word = random.choice(words)
-# print("Hint: The word has", len(random_word), "letters")
-
-# for x in random_word:
-#     print("_", end=" ")
-
-
-# """
-# Variables for use in Hangman game
-# """
-
-# letters_guessed = []
-# wrong_guesses = 0
-# wrong_letters_guessed = []
-# failure_count = 0
-
-
 def run_game():
 
     """
@@ -86,9 +66,6 @@ def run_game():
     wrong_guesses = 0
     wrong_letters_guessed = []
     failure_count = 6
-
-    # global wrong_guesses
-    # global failure_count
 
     while wrong_guesses != 6:
         print("\nLetters guessed so far: ")
@@ -134,10 +111,10 @@ def run_game():
                 wrong_letter_count += 1
 
         if wrong_letter_count == 0:
-            print(f"""Congratulations! The secret word was 
+            print(f"""Congratulations! The secret word was
             {random_word}.You win!!""")
             break
-    
+
     else:
         print("""\nSorry, you didn't win the game this time.
         Better luck next time!""")
@@ -155,14 +132,14 @@ def ask_to_play_again():
 
     elif answer == "n":
         print("""
-         ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄ ▄▄▄▄▄▄  ▄▄▄▄▄▄▄ ▄▄   ▄▄ ▄▄▄▄▄▄▄ ▄▄ 
+         ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄ ▄▄▄▄▄▄  ▄▄▄▄▄▄▄ ▄▄   ▄▄ ▄▄▄▄▄▄▄ ▄▄
 █       █       █       █      ██  ▄    █  █ █  █       █  █
 █   ▄▄▄▄█   ▄   █   ▄   █  ▄    █ █▄█   █  █▄█  █    ▄▄▄█  █
 █  █  ▄▄█  █ █  █  █ █  █ █ █   █       █       █   █▄▄▄█  █
 █  █ █  █  █▄█  █  █▄█  █ █▄█   █  ▄   ██▄     ▄█    ▄▄▄█▄▄█
-█  █▄▄█ █       █       █       █ █▄█   █ █   █ █   █▄▄▄ ▄▄ 
+█  █▄▄█ █       █       █       █ █▄█   █ █   █ █   █▄▄▄ ▄▄
 █▄▄▄▄▄▄▄█▄▄▄▄▄▄▄█▄▄▄▄▄▄▄█▄▄▄▄▄▄██▄▄▄▄▄▄▄█ █▄▄▄█ █▄▄▄▄▄▄▄█▄▄█
-        
+
 """)
 
 
