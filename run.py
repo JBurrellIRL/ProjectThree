@@ -51,7 +51,7 @@ def welcome_user():
             break
 
 
-welcome_user()
+# welcome_user()
 
 
 # random_word = random.choice(words)
@@ -80,12 +80,12 @@ def run_game():
     for x in random_word:
         print("_", end=" ")
 
-    print("Hint: The word has", len(random_word), "letters")
+    print("\nHint: The word has", len(random_word), "letters")
 
     letters_guessed = []
     wrong_guesses = 0
     wrong_letters_guessed = []
-    failure_count = 0
+    failure_count = 6
 
     # global wrong_guesses
     # global failure_count
@@ -117,10 +117,10 @@ def run_game():
             failure_count -= 1
             wrong_guesses += 1
             wrong_letters_guessed.append(guess)
-            print("""
-            f"Wrong! {guess} is not in our secret word. {failure_count}
-                turn(s) left."
-            """)
+            print(
+                f"""Wrong! '{guess}' is not in our random word. {failure_count}
+                turn(s) left"""
+            )
             hangman_figures(len(wrong_letters_guessed))
 
         letters_guessed.append(guess)
@@ -144,4 +144,45 @@ def run_game():
         print(f"The correct word was {random_word}")
 
 
-run_game()
+def ask_to_play_again():
+    """
+    Function to ask the player if they want to restart
+    the game.
+    """
+    answer = input("Do you want to play another game y/n?\n")
+    if answer == "y":
+        run_game_again()
+
+    elif answer == "n":
+        print("""
+         ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄ ▄▄▄▄▄▄  ▄▄▄▄▄▄▄ ▄▄   ▄▄ ▄▄▄▄▄▄▄ ▄▄ 
+█       █       █       █      ██  ▄    █  █ █  █       █  █
+█   ▄▄▄▄█   ▄   █   ▄   █  ▄    █ █▄█   █  █▄█  █    ▄▄▄█  █
+█  █  ▄▄█  █ █  █  █ █  █ █ █   █       █       █   █▄▄▄█  █
+█  █ █  █  █▄█  █  █▄█  █ █▄█   █  ▄   ██▄     ▄█    ▄▄▄█▄▄█
+█  █▄▄█ █       █       █       █ █▄█   █ █   █ █   █▄▄▄ ▄▄ 
+█▄▄▄▄▄▄▄█▄▄▄▄▄▄▄█▄▄▄▄▄▄▄█▄▄▄▄▄▄██▄▄▄▄▄▄▄█ █▄▄▄█ █▄▄▄▄▄▄▄█▄▄█
+        
+""")
+
+
+def run_game_again():
+
+    """
+    Function to run the game again, without
+    asking the player for their name again.
+    """
+    run_game()
+    ask_to_play_again()
+
+
+def main():
+    """
+    Main function to run the game.
+    """
+    welcome_user()
+    run_game()
+    ask_to_play_again()
+
+
+main()
