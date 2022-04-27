@@ -72,7 +72,7 @@ def run_game():
         for letter in letters_guessed:
             print(letter, end=" ")
         # variable for player guesses
-        guess = input("\nEnter a letter: ")
+        guess = input("\nEnter a letter: \n")
 
         if guess.isdigit():
             print("This game only accept letters! Please try again..")
@@ -95,8 +95,7 @@ def run_game():
             wrong_guesses += 1
             wrong_letters_guessed.append(guess)
             print(
-                f"""Wrong! '{guess}' is not in our random word. {failure_count}
-                turn(s) left"""
+                f"Wrong guess! {failure_count} turn(s) left"
             )
             hangman_figures(len(wrong_letters_guessed))
 
@@ -147,7 +146,7 @@ def run_game_again():
 
     """
     Function to run the game again, without
-    asking the player for their name again.
+    asking the player for their name.
     """
     run_game()
     ask_to_play_again()
