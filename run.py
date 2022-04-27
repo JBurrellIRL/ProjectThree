@@ -54,37 +54,47 @@ def welcome_user():
 welcome_user()
 
 
-random_word = random.choice(words)
-print("Hint: The word has", len(random_word), "letters")
+# random_word = random.choice(words)
+# print("Hint: The word has", len(random_word), "letters")
 
-for x in random_word:
-    print("_", end=" ")
+# for x in random_word:
+#     print("_", end=" ")
 
 
-"""
-Variables for use in Hangman game
-"""
+# """
+# Variables for use in Hangman game
+# """
 
-letters_guessed = []
-wrong_guesses = 0
-wrong_letters_guessed = []
-failure_count = 0
-
-"""
-Main game function code
-"""
+# letters_guessed = []
+# wrong_guesses = 0
+# wrong_letters_guessed = []
+# failure_count = 0
 
 
 def run_game():
 
-    global wrong_guesses
-    global failure_count
+    """
+    Main function for game operation
+    """
+    random_word = random.choice(words)
+    for x in random_word:
+        print("_", end=" ")
+
+    print("Hint: The word has", len(random_word), "letters")
+
+    letters_guessed = []
+    wrong_guesses = 0
+    wrong_letters_guessed = []
+    failure_count = 0
+
+    # global wrong_guesses
+    # global failure_count
 
     while wrong_guesses != 6:
         print("\nLetters guessed so far: ")
         for letter in letters_guessed:
             print(letter, end=" ")
-        # variable for player entry
+        # variable for player guesses
         guess = input("\nEnter a letter: ")
 
         if guess.isdigit():
@@ -121,16 +131,17 @@ def run_game():
                 print(f"{letter}", end=" ")
             else:
                 print("_", end=" ")
-                wrong_letter_count +=1
+                wrong_letter_count += 1
 
         if wrong_letter_count == 0:
-            print(f"Congratulations! The secret word was {random_word}.You win!!"
-            )
+            print(f"""Congratulations! The secret word was 
+            {random_word}.You win!!""")
             break
     
     else:
-        print("\nSorry, you didn't win the game this time. Better luck next time!")
+        print("""\nSorry, you didn't win the game this time.
+        Better luck next time!""")
         print(f"The correct word was {random_word}")
 
-run_game()
 
+run_game()
