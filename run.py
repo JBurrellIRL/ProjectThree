@@ -107,6 +107,30 @@ def run_game():
             failure_count -= 1
             wrong_guesses += 1
             wrong_letters_guessed.append(guess)
-            print(
-                f"Wrong! {guess} is not in our secret word. {failure_count} turn(s) left."
+            print("""
+            f"Wrong! {guess} is not in our secret word. {failure_count}
+                turn(s) left."
+            """)
+            hangman_figures(len(wrong_letters_guessed))
+
+        letters_guessed.append(guess)
+        wrong_letter_count = 0
+
+        for letter in random_word:
+            if letter in letters_guessed:
+                print(f"{letter}", end=" ")
+            else:
+                print("_", end=" ")
+                wrong_letter_count +=1
+
+        if wrong_letter_count == 0:
+            print(f"Congratulations! The secret word was {random_word}.You win!!"
             )
+            break
+    
+    else:
+        print("\nSorry, you didn't win the game this time. Better luck next time!")
+        print(f"The correct word was {random_word}")
+
+run_game()
+
