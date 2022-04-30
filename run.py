@@ -30,6 +30,8 @@ print("""Rules:
 -Good luck!
     """)
 
+username = None
+
 
 def welcome_user():
     """
@@ -37,7 +39,7 @@ def welcome_user():
     before the game begins. The name field only
     accepts letters.
     """
-    username = None
+    global username
     while True:
         username = input('Please enter your name:\n')
 
@@ -72,18 +74,19 @@ def run_game():
         for letter in letters_guessed:
             print(letter, end=" ")
         # variable for player guesses
-        guess = input("\nEnter a letter: \n")
+        guess = input("\nEnter a letter: \n").lower()
 
-        if guess.isdigit():
-            print("This game only accept letters! Please try again..")
+        if guess.isalpha() is False:
+            print("This game only accepts letters!")
+            continue
+
+        if len(guess) > 1:
+            print("Please enter one letter at a time.")
             continue
 
         if guess in letters_guessed:
             print("Letter already guessed. Try a different letter.")
             continue
-
-        if len(guess) > 1:
-            print("Please enter one letter at a time!")
 
         if guess in random_word:
             print(
@@ -125,7 +128,7 @@ def ask_to_play_again():
     """
     answer = input("Do you want to play another game y/n?\n")
     if answer == "y":
-        run_game_again()
+        main()
 
     elif answer == "n":
         print("""
@@ -140,21 +143,23 @@ def ask_to_play_again():
 """)
 
 
-def run_game_again():
+# def run_game_again():
 
-    """
-    Function to run the game again, without
-    asking the player for their name.
-    """
-    run_game()
-    ask_to_play_again()
+#     """
+#     Function to run the game again, without
+#     asking the player for their name.
+#     """
+#     run_game()
+#     ask_to_play_again()
 
 
 def main():
     """
     Main function to run the game.
     """
-    welcome_user()
+    if username is None:
+        welcome_user()
+    # welcome_user()
     run_game()
     ask_to_play_again()
 

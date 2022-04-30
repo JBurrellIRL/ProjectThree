@@ -25,12 +25,12 @@ words = [
   "lemur",
   "hyena",
   "panda",
-  "wildebeest"
-  "snake"
-  "gibbon"
-  "camel"
-  "chimpanzee"
-  "lynx"
-  "cougar"
+  "wildebeest",
+  "snake",
+  "gibbon",
+  "camel",
+  "chimpanzee",
+  "lynx",
+  "cougar",
   "jaguar"
 ]
