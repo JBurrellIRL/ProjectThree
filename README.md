@@ -16,39 +16,39 @@ JB's Hangman game is a terminal-based game, where the goal is to guess the rando
 
 * This game is a terminal-based game, that runs immediately when first launched. The game can also be run by clicking on the "Run Program" button built into the Heroku UI. Upon first launching the game, the user is presented with a welcome message, a bullet-point list of the rules of the game, and an invitation to enter their name, as shown in this screenshot:
 
-![Game Launch](screenshot)
+![Game Launch](https://github.com/JBurrellIRL/ProjectThree/blob/main/assets/gamelaunch.png?raw=true)
 
 * Once the player enters their name, the game then begins. The "name" input allows only letters, and returns an error if numbers, symbols or blank spaces are entered, as shown here:
 
-![Enter Name](screenshot)
+![Enter Name](https://github.com/JBurrellIRL/ProjectThree/blob/main/assets/enter-name.png?raw=true)
 
 * Once the player has successfully entered their name, the game is running. The player is prompted to enter a letter as their guess - above the input field, they're also shown a welcome message along with the text-written "Hint" and an area with underscores representing each unguessed letter. Under this is an area that displays letters the player has already guessed. Screenshot here:
 
-![Game has begun](screenshot)
+![Game has begun](https://github.com/JBurrellIRL/ProjectThree/blob/main/assets/game-has-begun.png?raw=true)
 
 * If the player guesses a letter correctly, they receive a message saying that they were correct, and that one or more of the guessed letter is found in the game. Below this, the correctly guessed letter will replace the underscore in each instance of it appearing in the random word. Also, the "Letters already guessed" area is updated with the letter guessed. Screenshot here:
 
-![Correct letter guess](screenshot)
+![Correct letter guess](https://github.com/JBurrellIRL/ProjectThree/blob/main/assets/correct-letter-guess.png?raw=true)
 
 * If the player guesses a letter wrongly, they receive a message saying that they were incorrect, and that the letter does not appear in the random word. Below this, they receive a text warning that their guess was wrong, and a hangman graphic also appears. This graphic then progresses with more and more of the stick figure added with each guess. Screenshot here:
 
-![Incorrect letter guess](screenshot)
+![Incorrect letter guess](https://github.com/JBurrellIRL/ProjectThree/blob/main/assets/wrong-guess.png?raw=true)
 
 * If the player wins the game, they receive a message in the terminal that states they've won the game, and confirms what the correct word was. Here's a screenshot of that:
 
-![Player Wins](screenshot)
+![Player Wins](https://github.com/JBurrellIRL/ProjectThree/blob/main/assets/player-wins.png?raw=true)
 
 * If the player loses, the Hangman graphic is completed and they recieve a text message in the terminal saying that they lost the game. Screenshot:
 
-![Player Lost](screenshot)
+![Player Lost](https://github.com/JBurrellIRL/ProjectThree/blob/main/assets/player-lost.png?raw=true)
 
 * As noted above, the player is given the option to play the game again if they desire. The entries 'y' or 'n' will then take the appropriate action, based on the player entry. Entering any  If the player elects to play for a second time, they don't have to re-enter their name again, as shown here:
 
-![play-game-2](screenshot)
+![play-game-2](https://github.com/JBurrellIRL/ProjectThree/blob/main/assets/play-game-2.png?raw=true)
 
 * While the game is in operation, only letters are accepted as valid entries in the terminal. The game returns an error if blank space, symbol, number or double-letter entries are submitted. Capital letters are converted to lower-case letters to ensure that the game functions. Here's a screenshot to show that:
 
-![Errors](screenshot)
+![Errors](https://github.com/JBurrellIRL/ProjectThree/blob/main/assets/errors.png?raw=true)
 
 ### Features Left to Implement
 
@@ -69,7 +69,7 @@ Below is a list of languages, plugins and other tools used to create and develop
 * Once the app was deployed to Heroku, I tested it through the deployed Heroku link, to make sure it worked as I intended it to.
 * I validated my code through the PEP8 Python validator, where it returns no errors. Screenshot here:
 
-![Pep8](screenshot)
+![Pep8](https://github.com/JBurrellIRL/ProjectThree/blob/main/assets/pep8.png?raw=true)
 
 
 ### Bugs
