@@ -9,7 +9,7 @@ JB's Hangman game is a terminal-based game, where the goal is to guess the rando
 * The player first needs to enter their name. Once they do this, the game then begins. 
 * The helpful hint described above will appear, and the player then plays the game by guessing random letters. 
 * When they guess a letter correctly, the underscore in the random word will be replaced by the correctly guessed letter.
-* The player can only make 6 incorrect guesses before the game ends. 
+* The player can only make 6 incorrect guesses before the game is completed. 
 * Once the player either succeeds or fails, the player is then offered the opportunity to restart the game again. If they decide not to restart the game, the game ends.
 
 ## UX
@@ -26,7 +26,7 @@ JB's Hangman game is a terminal-based game, where the goal is to guess the rando
 
 ![Game has begun](https://github.com/JBurrellIRL/ProjectThree/blob/main/assets/game-has-begun.png?raw=true)
 
-* If the player guesses a letter correctly, they receive a message saying that they were correct, and that one or more of the guessed letter is found in the game. Below this, the correctly guessed letter will replace the underscore in each instance of it appearing in the random word. Also, the "Letters already guessed" area is updated with the letter guessed. Screenshot here:
+* If the player makes a wrong guess, they receive a message saying that they were correct, and that one or more of the guessed letter is found in the game. Below this, the correctly guessed letter will replace the underscore in each instance of it appearing in the random word. Also, the "Letters already guessed" area is updated with the letter guessed. Screenshot here:
 
 ![Correct letter guess](https://github.com/JBurrellIRL/ProjectThree/blob/main/assets/correct-letter-guess.png?raw=true)
 
@@ -52,7 +52,7 @@ JB's Hangman game is a terminal-based game, where the goal is to guess the rando
 
 ### Features Left to Implement
 
-In the future, I'd like to expand this game to pick random words from different areas (outside of just wild animals) and then to show a hint to the player that's appropriate to the random word.
+In the future, I'd like to expand this game to pick random words from different areas (outside of just wild animals) and then to show a hint to the player that's appropriate to the random word. It would also be nice to create a "leaderboard" system, that tracks users guessing the correct word in the least amount of tries.
 
 ## Technologies Used
 
@@ -61,6 +61,7 @@ Below is a list of languages, plugins and other tools used to create and develop
 * [Python3](https://www.python.org/).
 * Git - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 * GitHub - GitHub is used to store the projects code after being pushed from Git.
+* Heroku.
 
 ## Testing
 
@@ -75,8 +76,8 @@ Below is a list of languages, plugins and other tools used to create and develop
 ### Bugs
 
 * I encountered issues with the game accepting invalid characters when developing the game - such as it not recognising capital letters as being the same as lowercase for the purpose of this game, blank space entries and numeric entries. These were resolved through using if statements in the main game while loop.
-* Resolved an issue where entering a character other than 'y' or 'n' at the end of the game terminated the game.
-* No further unresolved bugs have been detected.
+* Resolved an issue where entering a character other than 'y' or 'n' at the end of the game terminated the game entirely.
+* No further unresolved bugs have been detected. The game is working as intended.
 
 ### Accessibility
 
@@ -84,12 +85,12 @@ Below is a list of languages, plugins and other tools used to create and develop
 
 ## Deployment
 
-This project was deployed using Code Insitute's Heroku terminal. The game was created using Code Institute's GitPod template for Milestone Project 3, and deployed to GitHub. I also created an account on Heroku, and connected my GitHub repo to Heroku through the terminal method. 
+This project was deployed using Code Institute's Heroku terminal. The game was created using Code Institute's GitPod template for Milestone Project 3, and deployed to GitHub. I also created an account on Heroku, and connected my GitHub repo to Heroku through the terminal method. 
 
 ## Credits
 
 Resources used include the following:
 
 * Code Institute - course content, Love Sandwiches project and also the "Portfolio 3 Project Scope" video created by Matt Rudge.
-* Udemy Web Developer Bootcamp course, which I am also taking in parallel to this Code Institute course. I used this for help with Python functions and syntax. 
+* Udemy Python course, which I am also taking in parallel to this Code Institute course. I used this for help with Python functions and syntax. 
 * A big thanks to my mentor, Jack, for his advice during our mentoring sessions.

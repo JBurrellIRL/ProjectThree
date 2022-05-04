@@ -98,7 +98,7 @@ def run_game():
             wrong_guesses += 1
             wrong_letters_guessed.append(guess)
             print(
-                f"Wrong guess! {failure_count} turn(s) left"
+                f"Wrong guess! {failure_count} turn(s) left."
             )
             hangman_figures(len(wrong_letters_guessed))
 
@@ -126,7 +126,7 @@ def ask_to_play_again():
     Function to ask the player if they want to restart
     the game.
     """
-    answer = input("Do you want to play another game y/n?\n")
+    answer = input("Do you want to play another game y/n?\n").lower()
     if answer == "y":
         main()
 
