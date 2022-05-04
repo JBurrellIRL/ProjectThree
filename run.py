@@ -73,7 +73,7 @@ def run_game():
         print("\nLetters guessed so far: ")
         for letter in letters_guessed:
             print(letter, end=" ")
-        # variable for player guesses
+
         guess = input("\nEnter a letter: \n").lower()
 
         if guess.isalpha() is False:

@@ -11,35 +11,35 @@ def hangman_figures(x):
         print("|        ")
         print("|        ")
         print("===+")
-    if x == 2:
+    elif x == 2:
         print("\n+====+ ")
         print("|      | ")
         print("|      O ")
         print("|        ")
         print("|        ")
         print("===+")
-    if x == 3:
+    elif x == 3:
         print("\n+====+ ")
         print("|      | ")
         print("|      O ")
         print("|      | ")
         print("|        ")
         print("===+")
-    if x == 4:
+    elif x == 4:
         print("\n+====+ ")
         print("|      | ")
         print("|      O ")
         print("|     /| ")
         print("|        ")
         print("===+")
-    if x == 5:
+    elif x == 5:
         print("\n+====+ ")
         print("|      | ")
         print("|      O ")
         print("|     /|\ ")
         print("|        ")
         print("===+")
-    if x == 6:
+    elif x == 6:
         print("\n+====+ ")
         print("|      | ")
         print("|      O ")
